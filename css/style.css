@@ -1,0 +1,348 @@
+/* ---------------- Google font ------------------ */
+@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap");
+
+/* --- fonts --- */
+@font-face {
+  font-family: "Maia";
+  src: url("../fonts/Maia.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------------- Basic css ------------------ */
+
+html {
+  font-size: 0.661vw;
+}
+
+:root {
+  scroll-behavior: unset;
+  --dark: #000000;
+  --white: #ffffff;
+}
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+strong,
+i,
+ol,
+ul,
+li,
+form,
+label,
+footer,
+header,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  transition: 200ms;
+  color: inherit;
+}
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* body */
+body {
+  font-family: "Marcellus SC", serif;
+  padding: 0;
+  margin: 0;
+}
+/* -------------- preloader --------------- */
+
+#preloader {
+  position: fixed;
+  background: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader3 {
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  padding: 0;
+  text-align: left;
+}
+
+.loader3 span {
+  position: absolute;
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  background: #000000;
+  animation: loader3 1.5s linear infinite;
+}
+
+.loader3 span:last-child {
+  animation-delay: -0.9s;
+  -webkit-animation-delay: -0.9s;
+}
+
+@keyframes loader3 {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+/* -------------- Hamburger Menu --------------- */
+.hamburger-menu {
+  width: 7.4rem;
+  height: 7.4rem;
+  background: #000;
+  border-radius: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.hamburger-menu img {
+  position: absolute;
+  transition: 0.2s ease;
+  width: 3.4rem;
+}
+
+.hamburger-menu img:nth-child(2) {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.toggle_menu .hamburger-menu img:nth-child(1) {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.toggle_menu .hamburger-menu img:nth-child(2) {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0.3s;
+}
+/* -------------- Header Styles by Sahriar --------------- */
+.site_header {
+  padding: 0;
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  background: transparent;
+  top: 0;
+  left: 0;
+}
+.navbar {
+  padding: 4.5rem 2.5rem;
+}
+
+.menulink {
+  color: #fff;
+  font-family: "Marcellus SC", serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+  position: relative;
+  cursor: pointer;
+}
+.menulink:hover {
+  color: rgb(255, 255, 255, 0.5);
+}
+.primary_menu {
+  gap: 25.5rem;
+}
+
+.submenu {
+  position: absolute;
+  display: grid;
+  height: 0rem;
+  width: 12rem;
+  border-radius: 1rem;
+  background: rgb(255, 255, 255, 0.5);
+  border-bottom: 1px solid #fff;
+  align-items: center;
+  text-align: center;
+  top: calc(100% - 2rem);
+  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+  overflow: hidden;
+  opacity: 0;
+  transition-delay: 0s;
+}
+.submenu_wrap:hover .submenu {
+  top: calc(100% + 0.7rem);
+  height: 15.2rem;
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+.menulink2 {
+  width: 12rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+  align-items: center;
+  color: #fff;
+  font-size: 1.6rem;
+  font-family: "Marcellus SC", serif;
+  font-weight: 400;
+  line-height: 2.4rem; /* 150% */
+  letter-spacing: 0.16rem;
+}
+.menulink2:hover {
+  color: #fff;
+  background: rgb(255, 255, 255, 0.2);
+}
+.overlay {
+  opacity: 0;
+  background: #000;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+.overlay.show {
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* ----------------- Main Section ---------------- */
+.main_section {
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.main_img img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+.logo {
+  position: absolute;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+    hue-rotate(359deg) brightness(111%) contrast(101%);
+  width: 46rem;
+}
+
+.Rectangle {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+}
+
+/* ------------- Icon Section ---------------- */
+.icons_section {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 11rem;
+  background: rgb(0, 0, 0, 0.5);
+  height: 15rem;
+  display: flex;
+  align-items: center;
+}
+.icons_section img {
+  width: 4.2737rem;
+}
+.icons_section img:hover {
+  opacity: 0.5;
+}
+
+/* ------------- Mobile Menu -------------- */
+.mainmenu {
+  height: auto;
+  width: 100vw;
+  position: fixed;
+  top: -105%;
+  left: 0;
+  justify-content: center;
+  align-items: flex-end;
+  background: rgb(0, 0, 0, 0.5);
+  padding-top: 12rem;
+  max-height: 100vh;
+  overflow-y: scroll;
+  z-index: -2;
+  opacity: 0;
+  transition: ease 0.5s;
+}
+.toggle_menu .mainmenu {
+  top: 0;
+  opacity: 1;
+}
+.MobileMenu .menulink {
+  height: 5.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+  font-family: "Maia", sans-serif;
+  text-transform: uppercase;
+}
+.MobileMenu {
+  width: 100%;
+  margin: 0 1.8rem;
+}
+.mainmenu::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: 0;
+}
+.menulink img {
+  width: 1.4rem;
+  transform: translateY(-0.2rem);
+}
