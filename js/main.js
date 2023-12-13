@@ -20,6 +20,13 @@
         );
 
 
+        // list active
+        $(".accordion-item .menulink_main").click(function() {
+            $(".accordion-item .menulink_main").not(this).removeClass("active");
+            $(this).toggleClass("active");
+          });
+
+
     });
 
 })(jQuery);
