@@ -22,26 +22,18 @@
   .logo img {
     width: 30rem;
   }
-
+  .Rectangle {
+    display: none;
+  }
   /* --------- Icon Bottom ------------- */
   .icons_section {
     justify-content: space-around;
-    height: 12.2rem;
+    height: 10rem;
     padding: 0 6rem;
     gap: 0;
   }
   .icons_section img {
     width: 2.7778rem;
-  }
-  .line {
-    position: absolute;
-    width: 13.4rem;
-    height: 0.5rem;
-    background: rgb(255, 255, 255, 0.5);
-    border-radius: 10rem;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 1.5rem;
   }
 }
 
@@ -59,9 +51,10 @@
 
   /* --------- Icon Bottom ------------- */
   .icons_section {
-    gap: 0rem;
+    gap: 4.5rem;
     justify-content: space-between;
-    padding: 0 8rem;
+    padding: 0 3rem;
+    overflow-x: scroll;
   }
   .icons_section img {
     width: 2.7778rem;
@@ -77,7 +70,8 @@
 
   /* --------- Icon Bottom ------------- */
   .icons_section {
-    gap: 0rem;
+    gap: 4.5rem;
     padding: 0 2rem;
+    overflow-x: scroll;
   }
 }
